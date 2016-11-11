@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="prithiNLP">
+<head>
+    <meta charset="UTF-8">
+    <title>Prithi NLP</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/app.css">
+</head>
+<body ng-controller="AppController">
+<div class="col-sm-6 col-sm-offset-3">
+    <h3>You have Selected : {{nlpselected.solutions.text}} /{{nlpselected.industry.industry}} /{{nlpselected.product.product}}</h3>
+   
+    <div class="nlp-text vertical-align-middle">
+        <p>I need a
+            <nlp-dropdown 
+                    defaults="nlpdefaults.solutions" 
+                    options="solutionSet" 
+                    selected = "nlpselected.solutions" 
+                    on-click="onSolutionSelect"
+                    text="text">
+            </nlp-dropdown> 
+            for any 
+             <nlp-dropdown  
+                    defaults="nlpdefaults.industry" 
+                    options="industryOptions" 
+                    selected = "nlpselected.industry" 
+                    on-click="onIndustrySelect" 
+                    ng-class = "{'disabled':industryOptions.length == 1}"
+                    text="industry">
+            </nlp-dropdown> 
+             on any 
+             <nlp-dropdown   
+                    defaults="nlpdefaults.product" 
+                    options="productOptions" 
+                    selected = "nlpselected.product" 
+                    on-click="onProductSelect" 
+                    ng-class = "{'disabled':productOptions.length == 1}"
+                    text="product">
+            </nlp-dropdown> 
+            
+        </p>
+
+        
+    </div>
+    
+
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controller.js"></script>
+<script src="app/service.js"></script>
+<script src="app/directive.js"></script>
+</body>
+</html>

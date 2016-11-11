@@ -1,0 +1,36 @@
+.nlp-text{
+    font-size: 60px;
+}
+
+.vertical-align-middle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+nlp-dropdown.disabled{
+    color:#777;
+    pointer-events: none;
+}
+
+
+.nlp-selected-text{
+    font-size:62px;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.nlp-modal .nlp-list{
+    padding-left:0;
+}
+.nlp-modal .nlp-list li{
+    display:block;
+    padding: 8px 1px;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;
+}
+
+.nlp-modal .nlp-list li.active{
+    font-weight: bold;
+}

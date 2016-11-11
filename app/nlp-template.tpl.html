@@ -1,0 +1,14 @@
+<span class="nlp-selected-text" ng-click="nlpOpenOptions()">{{selected[text] |lowercase}}</span>
+
+
+
+
+ <script type="text/ng-template" id="nlpModal.html">
+        
+        <div class="modal-body" id="modal-body">
+           <ul class="nlp-list">
+               <li ng-repeat="option in options" ng-click="ok($index)" ng-class="{'active':(selected[text] == option[text])}">{{option[text]}}</li>
+           </ul>
+        </div>
+        
+    </script>
